@@ -6,6 +6,7 @@ use ndarray::*;
 use ndarray_linalg::{QR, SVD};
 use num::complex::{c64, Complex};
 use pyo3::prelude::*;
+use quantypes::QuantumCircuit;
 use rand::prelude::*;
 use std::cmp;
 use std::f64::consts::PI;
@@ -655,7 +656,7 @@ impl StabilizerTensorNetwork {
         }
     }
 
-    fn project_magic_n(&mut self, q: usize) {
+    fn project_magic_n(&mut self, _q: usize) {
         // Do nothing -- For consistency with MAST
     }
 
@@ -1460,6 +1461,7 @@ fn mast(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<MagicInjectedStn>()?;
     m.add_class::<StabilizerTensorNetwork>()?;
     m.add_class::<MatrixProductState>()?;
+    m.add_class::<QuantumCircuit>()?;
     Ok(())
 }
 

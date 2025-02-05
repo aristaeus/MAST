@@ -271,6 +271,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b248f5224d1d606005e02c97f5aa4e88eeb230488bcc03bc9ca4d7991399f2b5"
 
 [[package]]
+name = "inventory"
+version = "0.3.19"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "54b12ebb6799019b044deaf431eadfe23245b259bba5a2c0796acec3943a3cdb"
+dependencies = [
+ "rustversion",
+]
+
+[[package]]
 name = "katexit"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -356,6 +365,7 @@ dependencies = [
  "num",
  "proptest",
  "pyo3",
+ "quantypes",
  "rand",
 ]
 
@@ -709,6 +719,7 @@ checksum = "f402062616ab18202ae8319da13fa4279883a2b8a9d9f83f20dbade813ce1884"
 dependencies = [
  "cfg-if",
  "indoc",
+ "inventory",
  "libc",
  "memoffset",
  "num-complex",
@@ -763,6 +774,15 @@ dependencies = [
  "pyo3-build-config",
  "quote",
  "syn 2.0.98",
+]
+
+[[package]]
+name = "quantypes"
+version = "0.1.0"
+source = "git+https://github.com/aristaeus/quantypes.git#49577291a1baac641b5b7b941e40c42f8e3b9968"
+dependencies = [
+ "pyo3",
+ "thiserror 1.0.63",
 ]
 
 [[package]]
@@ -892,6 +912,12 @@ name = "rustls-pki-types"
 version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc0a2ce646f8655401bb81e7927b812614bd5d91dbc968696be50603510fcaf0"
+
+[[package]]
+name = "rustversion"
+version = "1.0.19"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f7c45b9784283f1b2e7fb61b42047c2fd678ef0960d4f6f1eba131594cc369d4"
 
 [[package]]
 name = "rusty-fork"

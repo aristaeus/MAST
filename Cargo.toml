@@ -18,3 +18,4 @@ num = "0.4.3"
 proptest = "1.5.0"
 pyo3 = { version = "0.22.5", features=["num-complex"] }
 rand = "0.8.5"
+quantypes = {git = "https://github.com/aristaeus/quantypes.git"}
